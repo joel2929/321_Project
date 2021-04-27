@@ -28,14 +28,14 @@ subplot(2,1,1)
 plot(20*log10(abs(X)));
 ylabel("Magnitude in dB");
 xlabel("Frequency in Hz");
-title("Magitude Spectrem of x in dB");
+title("Magitude Spectrum of x in dB");
 axis([0 8192 0 100 ])
 
 subplot(2,1,2)
 plot(f,(20*log10(abs(X))));
 ylabel("Magnitude in dB");
 xlabel("Frequency in Hz");
-title("FFshited Magitude Spctrem of x in dB");
+title("FFshifted Magitude Spectrum of x in dB");
 axis([-4096 4096 0 100 ])
 
 

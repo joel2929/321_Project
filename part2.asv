@@ -23,8 +23,25 @@ half_note_D = harmonics(D,half,9,A_vect,1);
 
 clar_melody = [eight_note_rest eight_note_G eight_note_G eight_note_G half_note_Eb eight_note_rest eight_note_F eight_note_F eight_note_F half_note_D];
 
-soundsc(clar_melody);
+% soundsc(clar_melody);
 
 figure(1)
 spectrogram(clar_melody,256,196, 512,8192,'yaxis');
 title("Spectrogram of clarinet")
+
+y = sosfilt(num,clar_melody);
+spectrogram(y,256,196, 512,8192,'yaxis');
+title("Spectrogram of Filtered clarinet")
+
+
+% n = length(y);
+% f = (-n/2:n/2-1)*(Fs/n);     %frequency range
+% 
+% Y = fftshift(fft(y,n));
+% 
+% plot(f,20*log10(abs(Y)));
+axis([-4096 4096 -110 200]);
+title("Magnitude Spectrum of Butterworth Filtered Signal, fftshifted");
+ylabel("Magnitude in dB");
+xlabel("Frequency in Hz");
+

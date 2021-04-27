@@ -8,7 +8,7 @@
 % Butterworth Lowpass filter designed using FDESIGN.LOWPASS.
 
 % All frequency values are in Hz.
-% Fs = 8192;  % Sampling Frequency
+Fs = 8192;  % Sampling Frequency
 
 N = 40;
 A_vect = linspace(1,1,N);
@@ -18,17 +18,18 @@ x = harmonics(100,2,N,A_vect,0);
 % X = fftshift(fft(x,n));
 
 y = sosfilt(SOS_LP,x);
-% n = length(y);
-% f = (-n/2:n/2-1)*(Fs/n);     %frequency range
+% Gy = y.*G_LP;
+n = length(y);
+f = (-n/2:n/2-1)*(Fs/n);     %frequency range
+soundsc(y);
 
-Y = fft(y);
-plot(20*log10(abs(Y)));
+Y = fftshift(fft(y,n));
 
-% plot(f,mag)
-% axis([-4096 4096 0 100]);
-% title("Magnitude Spectrum of Butterworth Filtered Signal, fftshifted");
-% ylabel("Magnitude in dB");
-% xlabel("Frequency in Hz");
+plot(f,20*log10(abs(Y)));
+axis([-4096 4096 -110 200]);
+title("Magnitude Spectrum of Butterworth Filtered Signal, fftshifted");
+ylabel("Magnitude in dB");
+xlabel("Frequency in Hz");
 
 
 

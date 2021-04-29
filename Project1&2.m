@@ -107,7 +107,7 @@ clc, clear,close all;
 % title('Spectrogram of Modulated Melody')
 % 
 % 
-% %%% TASK 4.1 %%%
+%%% TASK 4.1 %%%
 % echo = zeros(size(0:1/8192:2));
 % echo(1) = 1; 
 % echo(4096) = .5;
@@ -120,12 +120,12 @@ clc, clear,close all;
 % ylabel('Amplitude')
 % title('Echo Simulation')
 % xlabel('Time(s) up to 2 Seconds')
-% 
-% %%% TASK 4.2 %%%
+
+%%% TASK 4.2 %%%
 % reverb = conv(echo, melody2); % Melody with echo 
-% % soundsc(reverb)
-% 
-% %%% TASK 4.3 %%%
+% soundsc(reverb)
+
+%%% TASK 4.3 %%%
 % figure(11)
 % spectrogram(reverb,256,196, 512 , 8192,'yaxis') 
 % title('Spectrogram of Reverberated and Modulated Melody')

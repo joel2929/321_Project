@@ -22,7 +22,15 @@ elseif c ==1
 elseif c == 2
      t = 0:1/fs:S;
      c = shape2(S);
-     out = (g.*c.*sin(2*pi*f*t));    
+%      pause2 = genrest(.03);
+     note2 = (g.*c.*sin(2*pi*f*t));   
+     out = note2;
+     
+% elseif c == 3
+%      t = 0:1/fs:S;
+%      t_trans = transpose(t);
+%      c = shape2(S);
+%      out = (g.*c.*sin(2*pi*f*t_t_trans)); 
 % elseif c == 2
 %     Attk = 0:(1/fs):.03;
 %     t = 0:1/fs:S;

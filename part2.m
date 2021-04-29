@@ -1,13 +1,17 @@
+% Note's Duration
 whole = 2;
 half = 1;
 quarter = .5;
 eight = .25;
 
-G = 392;
-Eb = 311;
-F = 349;
+% Note's Frequencies 
 D = 294;
+Eb = 311;
+E = 330;
+F = 349;
+G = 392;
 
+% Piano vector
 A_vect = [1 0 .75 0 .5 0 .14 0 .5]; 
 
 eight_note_rest = genrest(.25);

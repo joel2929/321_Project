@@ -8,7 +8,7 @@ T = 1/fs ; % is the sampling period
 S = duration;
 Attk = 0:T:.03;
 t = 0:T:S-0.03;
-Attk_gain = 33.*Attk; % Time 33 to be able to hae 1 amplitude
+Attk_gain = 33.*Attk; % Time 33 to be able to have 1 amplitude
 D = exp(-(2/S).*t); %%% time constant = tau = 5
 % Decay = D.*t;
 % DD = [Attk_gain Decay];
